@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Edoardo Leanza">
+      <title>L'azienda ospitante</title>
+      <style type="text/css">
+         body{color: black;
+         font-family: Verdana;
+         font-size: 18px;
+         text-align: left;}			
+         h1{color: green;
+         font-family: Verdana;
+         font-size: 50px;
+         font-weight: bold;
+         text-align: center;}
+         #tornasu{
+         position: fixed;
+         bottom: 0px;
+         right: 0px;
+         display: none;
+         padding:10px;
+         }
+      </style>
+   </head>
+   <a name="inizio"></a>
+   <body background="sfondo2.jpg">
+      <h1>Mansioni e compiti svolti</h1>
+      <table>
+         <tr>
+            <td style="width:1000px">
+               La maggior parte del tempo l’ho speso assistendo a come i dottori lavoravano, facevano le 
+               visite e come operavano i propri pazienti. In particolare, ho potuto osservare:
+               <ul>
+                  <li>come è fatta una vera sala operatoria con tutti i suoi strumenti, macchinari, 
+                     pinze, corde ecc... ;
+                  </li>
+                  <li>come è fatta e come deve essere usata la centrifuga da laboratorio, per poter, appunto, centrifugare il sangue prelevato da un paziente ed analizzarlo, ai fini diagnostici (capire se ha patologie rischiose o qualunque altro tipo di patologia);</li>
+                  <li>come vengono catalogate le pillole, le siringhe e le corde sterili, quest'ultime 
+                     necessarie per poter operare chirurgicamente sui tessuti di un paziente.
+                  </li>
+               </ul>
+               Inoltre, quando i clienti telefonavano alla struttura, io e Sasso dovevamo appuntarci 
+               nome, cognome e perché avessero chiamato. Questo per poi riferirlo al dott. Vatta che 
+               successivamente si sarebbe occupato della prenotazione della visita oppure di spiegare 
+               al padrone dell’animale cosa fare in quella determinata situazione (per esempio cosa 
+               fare se il cane non mangia da un giorno, come fare a dare una pillola specifica 
+               al gatto etc…).<br><br>
+               Oltre a ciò, dovevamo anche controllare che i cani ed i gatti stessero bene nelle loro 
+               gabbie e cambiarle o pulirle se diventavano troppo sporche.<br>
+               <br>Quando il dott. Vatta finiva di farci vedere le ecografie e radiografie dei suoi pazienti, 
+               molto spesso i proprietari chiedevano di riceverne una copia e a quel punto io gliele 
+               inviavo via mail.
+               <br> Quando arrivava un paziente che doveva fare una visita, un’ecografia o una radiografia, 
+               io e Sasso dovevamo tenerlo fermo. Fortunatamente, nel fare questo non ci sono mai 
+               stati problemi, dato che i cani ed i gatti gestiti erano quasi sempre collaborativi.
+               <br> Il dott. Zucchetti ci ha insegnato come fare “i nodi più semplici che un chirurgo può fare 
+               su un paziente”, però su delle spugne, dato che era la nostra prima volta. <br>Questo è il risultato:
+            </td>
+            <td style="width:500px"> <img src="mansioniecompitisvolti2.png"> </td>
+         </tr>
+      </table>
+      <a href="HOME.html">return home</a><br>
+      <a href="COMMENTOFINALE.html">next page→</a>
+      <a href="#inizio">
+         <div id="tornasu">
+            <img src= "tornasu.png" class="tornasu" width="40px" height="40px">
+         </div>
+      </a>
+   </body>
+   <script>
+      window.addEventListener ("scroll",function(){
+      if (window.pageYOffset>300) {
+      document.getElementById ("tornasu").style.display= "block";
+      }
+      else if (window.pageYOffset<300) {
+      document.getElementById ("tornasu").style.display= "none";
+      }
+      val[0].innerHTML= "PageYOffset = "+window.pageYOffset
+      },!1);
+   </script>
+</html>
