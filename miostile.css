@@ -1,0 +1,35 @@
+<style>    
+
+		a:link{
+			color: yellow;
+		}
+		
+		a:visited{
+			color: pink;
+		}
+		
+		a:hover{
+			color: green;
+		}
+		
+		h1{
+			color: violet;
+			font-family:verdana;
+		}
+		
+		#comepiaceame{
+			color: blue;
+			font-family:calibri;
+			font-size:30px;
+		}
+		
+		body {
+            background-color: rgb(50, 100, 150);
+			color: white;
+			font-size:50px;
+			font-family:arial;
+			font-weight:bold;
+			font-style:normal;
+        }
+
+</style>
