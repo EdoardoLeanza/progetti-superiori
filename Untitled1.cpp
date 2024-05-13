@@ -10,4 +10,4 @@ cin>>a>>b>>x;
 x=b/a;
 cout<<"Il valore di x e'"<<x<<endl;
 system ("pause");
-return 55;}
+return 0;}

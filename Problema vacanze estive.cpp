@@ -1,5 +1,4 @@
 #include<iostream>
-#include<cstdlib>
 using namespace std;
 int NP_1, NP_2, NP_3, T, S_T, S_3, S_2, S_1, S_31, S_21;
 int main ()
@@ -10,7 +9,7 @@ if(T>42)
   S_1=250*NP_1;
 else
   S_1=200*NP_1;
-
+  
 if(T>46)
   S_21=250;
 else

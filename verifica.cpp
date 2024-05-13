@@ -1,37 +1,84 @@
 #include<iostream>
+#include<cstdlib>
 using namespace std;
-int N_P1, N_P2, N_P3, T, S_1, S_2, S_3, S_21, S_31, S_T, risp, C_M2;
-int main ()
-{cout<<"Inserisci il numero di pullover 1, il numero di pullover tipo 2, il numero di pulloer tipo 3 e la taglia";
-cin>>N_P1>>N_P2>>N_P3>>T;
+int b,a,i,risp,n,c,g,k;
+float mm[30],m,d,s;
 
-if(T<=42)
-  {S_1=N_P1*200;}
-else
-  {S_1=N_P1*250;}
-cout<<"La spesa dei pullover 1 e' Euro "<<S_1;
-if(T<=46)
-  {C_M2=200;}
-else
-  {C_M2=250;}
+void inserimento()
+{ do
+    {cout<<"Inserisci numero dei giorni del mese"<<endl;
+     cin>>n;
+    }while(n<28 || n>31);
+  for(i=0;i<n;i++)
+    {cout<<"Inserisci i millimetri di pioggia del giorno "<<i+1<<endl;
+    do{
+        cin>>mm[i];
+        if(mm[i]<1 || mm[i]>30)
+            cout<<"Errore, i millimetri di pioggia devono essere tra 1 e 30"<<endl;
+      }while(mm[i]<1 || mm[i]>30);
+    }
+}
 
-if(N_P2>3)
-  {S_2=3*C_M2+(N_P2-3)*0.5*C_M2;}
-else 
-  {S_2=C_M2*N_P2;}
-cout<<"La spesa dei pullover 2 e' Euro "<<S_2;
-if(T<=46)
-  {S_31=150*N_P3;}
-else 
-  {S_31=175*N_P3;}
-  
-if(N_P3>2)
-  {S_3=S_31*0.8;}
-else
-  {S_3=S_31;}
-cout<<"La spesa dei pullover 3 e' Euro "<<S_3;
-S_T=S_1+S_2+S_3;
-cout<<"La spesa totale e' Euro "<<S_T;
-cout<<"Vuoi continuare?(1=No, 2=Si')";
-while (risp==1);
+void conta()
+{
+           k=0;
+        {   cout<<"Inserisci il numero e mostrero' quante volte e' stato inserito"<<endl;
+            cin>>d;
+            for(g=0;g<n;g++)
+              {  if(d==mm[g])
+                    k++;
+                }
+
+}
+                cout<<"Il numero e' stato trovato "<<k<<" volte"<<endl;
+}
+
+void stampa()
+{for(i=0;i<n;i++)
+cout<<"Il valore inserito per il  giorno "<<i+1<<" e' "<<mm[i]<<endl;
+}
+
+void media()
+{   s=0;
+    {for(i=0;i<n;i++)
+    {s=s+mm[i];
+    m=s/n;
+    }
+}
+cout<<"La media e' "<<m<<endl;
+}
+void giorno()
+{   cout<<"Inserisci i millimetri caduti e mostrero' in quali giorni/o sono stati rilevati"<<endl;
+    cin>>b;
+    for(i=0;i<n;i++)
+      {  if(mm[i]==b)
+            cout<<"Nel giorno "<<i+1<<" e' stato rilevato "<<b<<endl;
+    }
+}
+void stampa2()
+{   cout<<"Inserisci un giorno del mese e stampero' i millimetri di pioggia caduti in quel giorno"<<endl;
+    cin>>c;
+         if(c<0 || c>31)
+            cout<<"Errore, scelta errata"<<endl;
+        else
+            cout<<"Nel giorno "<<c<<" sono caduti "<<mm[c-1]<<" millimetri di pioggia"<<endl;
+}
+
+int main()
+{
+    inserimento();
+do{    cout<<"Scegli: 1-Inserimento 2-Stampa 3-Media 4-Giorno 5-Stampa2 6-Conta"<<endl;
+        cin>>a;
+        switch(a)
+        {case 1:inserimento();break;
+         case 2:stampa();break;
+         case 3:media();break;
+         case 4:giorno();break;
+         case 5:stampa2();break;
+         case 6:conta();break;
+         default: cout<<"Scelta errata"<<endl;
+        }
+cout<<"Vuoi continuare?(1=Si,2=No)"<<endl;
+cin>>risp;
+}while(risp==1);
 return 0;}
